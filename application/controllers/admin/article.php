@@ -11,8 +11,8 @@ class Article extends CI_Controller {
             $this->load->library('form_validation');
             $this->form_validation->set_rules('title', '文章标题', 'required|min_length[5]');
             $this->form_validation->set_rules('type', '文章类型', 'required|integer');
-            $this->form_validation->set_rules('introduce', '文章分类', 'required|max_length[50]');
-            $this->form_validation->set_rules('content', '文章分类', 'required|max_length[2000]');
+            $this->form_validation->set_rules('introduce', '文章简介', 'required|max_length[50]');
+            $this->form_validation->set_rules('content', '文章内容', 'required|max_length[2000]');
             if($this->form_validation->run()){
                 echo 'fdfd';die();
             }

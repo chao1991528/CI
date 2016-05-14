@@ -34,30 +34,20 @@
 	</div>
 <!-- 左侧菜单 -->
 		<div id="left_box">
-			<p class="use">常用菜单</p>
+			<p class="use">功能管理</p>
 			<div class="menu_box">
-				<h2>常用菜单</h2>
+				<h2>文章管理</h2>
 				<div class="text">
 					<ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">前台首页</a>				        	
+				        	<a href="<?php echo site_url('admin/article/article_add');?>" class="pos">添加文章</a>				        	
 				        </li> 
 				    </ul>
 					<ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">查看信息</a>				        	
+				        	<a href="" class="pos">文章列表</a>				        	
 				        </li> 
-				    </ul>
-				    <ul class="con">
-				        <li class="nav_u">
-				        	<a href="" class="pos">系统信息</a>				        	
-				        </li> 
-				    </ul>
-				    <ul class="con">
-				        <li class="nav_u">
-				        	<a href="" class="pos">密码修改</a>				        	
-				        </li> 
-				    </ul>
+				    </ul>				    
 				</div>
 			</div>	
 			<div class="menu_box">
