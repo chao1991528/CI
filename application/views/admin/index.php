@@ -49,6 +49,21 @@
 				        </li> 
 				    </ul>				    
 				</div>
+			</div>
+			<div class="menu_box">
+				<h2>文章栏目管理</h2>
+				<div class="text">
+					<ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo site_url('admin/category/category_add');?>" class="pos">添加栏目</a>				        	
+				        </li> 
+				    </ul>
+					<ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo site_url('admin/category/index');?>" class="pos">栏目列表</a>				        	
+				        </li> 
+				    </ul>				    
+				</div>
 			</div>	
 			<div class="menu_box">
 				<h2>常用菜单</h2>

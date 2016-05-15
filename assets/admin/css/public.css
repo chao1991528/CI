@@ -123,3 +123,7 @@ a.showMinus{
 	padding: 3px;
 	font-weight: 400;
 }
+
+.errorMessage{
+	color:#F54C4C;
+}

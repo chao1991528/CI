@@ -555,6 +555,33 @@ if ( ! function_exists('html_escape'))
 		}
 	}
 }
-
+/**
+ * [success description]
+ * @param  [type] $url     [跳转链接]
+ * @param  [type] $message [成功信息]
+ * @return [type]          [description]
+ */
+if (! function_exists('success'))
+{
+	function success($url, $message){
+		header('Content-Type:text/html;charset=utf-8');
+		$url = site_url($url);
+		echo "<script type='text/javascript'>alert('$message');location.href='$url'</script>";
+		die();
+	}
+}
+/**
+ * [error description]
+ * @param  [type] $message [失败信息]
+ * @return [type]          [description]
+ */
+if (! function_exists('error'))
+{
+	function error($message){
+		header('Content-Type:text/html;charset=utf-8');
+		echo "<script type='text/javascript'>alert('$message');window.history.back();</script>";
+		die();
+	}
+}
 /* End of file Common.php */
 /* Location: ./system/core/Common.php */

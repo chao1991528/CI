@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.hdci.com/';
+$config['base_url'] = 'http://www.learnci.com/';
 
 /*
 |--------------------------------------------------------------------------
@@ -171,7 +171,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 /*
 |--------------------------------------------------------------------------
 | Error Logging Threshold
-|--------------------------------------------------------------------------
+|---------------------------------------- ----------------------------------
 |
 | If you have enabled error logging, you can set an error threshold to
 | determine what gets logged. Threshold options are:
@@ -287,7 +287,7 @@ $config['cookie_secure']	= FALSE;
 | COOKIE data is encountered
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
