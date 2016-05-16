@@ -45,7 +45,7 @@
 				    </ul>
 					<ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">文章列表</a>				        	
+				        	<a href="<?php echo site_url('admin/article/index');?>" class="pos">文章列表</a>				        	
 				        </li> 
 				    </ul>				    
 				</div>

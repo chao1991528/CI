@@ -2,7 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/admin/css/public.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/admin/css/public.css';?>"/>
+    <script type="text/javascript" src="<?php echo base_url() ;?>/org/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript">
+        window.UEDITOR_HOME_URL = "<?php echo base_url() ?>org/ueditor/";
+        window.onload = function(){
+            window.UEDITOR_CONFIG.initialFrameWidth = 800;
+            window.UEDITOR_CONFIG.initialFrameHeight = 200;
+            UE.getEditor('content');
+        }
+    </script>
+    <script type="text/javascript" src="<?php echo base_url() . 'org/ueditor/ueditor.config.js';?>"></script>
     <title>文章添加</title>
 </head>
 <body>
@@ -20,7 +30,7 @@
             </tr>
             <tr>
                 <td>类型</td>
-                <td>
+                <td>                 
                     <input type='radio' value="1" name="type" <?php echo set_radio('type', '1', 'true');?>/>普通
                     <input type='radio' value="2" name='type' <?php echo set_radio('type', '2');?>/>热门
                 </td>
@@ -29,14 +39,17 @@
                 <td>栏目</td>
                 <td>
                     <select name='cid'>
-                        <option value='1' <?php echo set_select('cid', '1', 'true');?>>情感</option>
-                        <option value='2' <?php echo set_select('cid', '2');?>>生活</option>
+                        <?php foreach ($cates as  $v) :?>
+                            <option value="<?php echo $v['category_id'];?>" <?php echo set_select('cid', $v['category_id']);?>>
+                                <?php echo $v['category_name'];?>
+                            </option>
+                        <?php endforeach ?>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>缩略图</td>
-                <td><input type="file"></td>
+                <td><input type="file" name='thumb'></td>
             </tr>
             <tr>
                 <td>摘要</td>
@@ -48,7 +61,7 @@
             <tr>
                 <td>内容</td>
                 <td>
-                        <textarea rows="3" cols="50" name="content"></textarea>
+                        <textarea rows="3" cols="50" name="content" id='content'><?php echo set_value('content');?></textarea>
                         <?php echo form_error('content', '<span class="errorMessage">', '</span>');?>
                 </td>
             </tr>

@@ -45,7 +45,7 @@ class Category extends CI_Controller {
                 success('admin/category/index', '修改栏目成功');
             }
         }
-        $this->load->view('admin/Category_edit', $data);
+        $this->load->view('admin/category_edit', $data);
     }
 
     public function category_del($id){

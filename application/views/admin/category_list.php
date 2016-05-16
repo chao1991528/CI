@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?php echo base_url() . '/assets/admin/css/public.css';?>"/>
-    <title>添加文章栏目</title>
+    <title>文章栏目列表</title>
 </head>
 <body>
     <table class='table'>
