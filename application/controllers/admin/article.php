@@ -81,15 +81,34 @@ class Article extends CI_Controller {
         $this->load->view('admin/article_add', $data);
     }
 
-    public function article_edit(){
+    public function article_edit($id){
         $this->load->helper('form');
-        $this->load->view('admin/article_edit');
-        if($this->input->post('send') == '添加'){
+        $article = $this->article_model->find_article($id);
+        if(!$article){
+            error('文章不存在');
+        }
+        if($this->input->post('send') == '保存'){
             $this->load->library('form_validation');
             if($this->form_validation->run('article')){
-
+                $new_article['title'] = $this->input->post('title');
+                $new_article['atype'] = $this->input->post('atype');
+                $new_article['cid'] = $this->input->post('cid');
+                $new_article['introduce'] = $this->input->post('introduce');
+                $new_article['content'] = $this->input->post('content');
+                $new_article['thumb'] = $this->input->post('thumb');
+                $new_article['aid'] = $this->input->post('aid');
+                $status = $this->article_model->update_article(new_article);
+                echo $this->db->last_query();
+                if(status){
+                    success('admin/article/index', '更新文章成功');
+                }
             }
         }
+        $this->load->model('category_model');
+        $data['categorys'] = $this->category_model->category_all();
+        $data['article'] = $article;
+        $this->load->view('admin/article_edit', $data);
+        
     }
 }
 

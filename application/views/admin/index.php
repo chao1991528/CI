@@ -22,7 +22,7 @@
 				<span class="adm_people">[houdunwang]</span>
 			</p>
 			<p class="now_time">
-				今天是：2013.7.13 
+				今天是：<?php echo date('Y-m-d', time());?> 
 				您的当前位置是：
 				<span>首页</span>
 			</p>

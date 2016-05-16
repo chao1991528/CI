@@ -19,11 +19,11 @@ class Article_model extends CI_Model{
     // }
 
     public function find_article($article_id){
-        return $this->db->where(array('article_id'=>$article_id))->get($this->table)->result_array();
+        return $this->db->where(array('aid'=>$article_id))->get($this->table)->result_array();
     }
 
-    public function update_article($article_id,$data){
-        return $this->db->update($this->table,$data,array('article_id'=>$article_id));
+    public function update_article($data){
+        return $this->db->update($this->table,$data);
     }
 
     public function article_del($article_id){
