@@ -51,6 +51,7 @@ $active_record = TRUE;
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'chao123';
+$db['default']['password'] = 'chao123-00000';
 $db['default']['database'] = 'ci';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'ci_';
