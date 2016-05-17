@@ -65,8 +65,8 @@ class Article extends CI_Controller {
                 }
 
                 $data = array(
-                    'article_title' => $this->input->post('title'),
-                    'atype' => $this->input->post('type'),
+                    'article_title' => $this->input->post('article_title'),
+                    'atype' => $this->input->post('atype'),
                     'cid' => $this->input->post('cid'),
                     'thumb' => $img['file_name'],
                     'content' => $this->input->post('content'),
@@ -90,16 +90,15 @@ class Article extends CI_Controller {
         if($this->input->post('send') == '保存'){
             $this->load->library('form_validation');
             if($this->form_validation->run('article')){
-                $new_article['title'] = $this->input->post('title');
+                $new_article['article_title'] = $this->input->post('article_title');
                 $new_article['atype'] = $this->input->post('atype');
                 $new_article['cid'] = $this->input->post('cid');
                 $new_article['introduce'] = $this->input->post('introduce');
                 $new_article['content'] = $this->input->post('content');
                 $new_article['thumb'] = $this->input->post('thumb');
                 $new_article['aid'] = $this->input->post('aid');
-                $status = $this->article_model->update_article(new_article);
-                echo $this->db->last_query();
-                if(status){
+                $status = $this->article_model->update_article($new_article, $id);
+                if($status){
                     success('admin/article/index', '更新文章成功');
                 }
             }

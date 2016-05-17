@@ -2,12 +2,12 @@
    $config = array(
                'article'=>array(
                   array(
-                     'field'   => 'title', 
+                     'field'   => 'article_title', 
                      'label'   => '文章标题', 
                      'rules'   => 'required|min_length[5]'
                   ),
                   array(
-                        'field'   => 'type', 
+                        'field'   => 'atype', 
                         'label'   => '文章类型', 
                         'rules'   => 'required|integer'
                   ),

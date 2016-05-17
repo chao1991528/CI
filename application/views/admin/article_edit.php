@@ -9,14 +9,15 @@
     <form action="" method="POST" enctype="multipart/form-data">
         <input type='hidden' name='aid' value='<?php echo $article[0]['aid'];?>'/>
         <table class='table'>
+            <?php echo validation_errors();?>
             <tr>
-                <td class='th' colspan='10'>发表文章</td>
+                <td class='th' colspan='10'>修改文章</td>
             </tr>
             <tr>
                 <td>标题</td>
                 <td>
-                    <input type='text' name='title' value="<?php echo $article[0]['article_title'];?>"/>
-                    <?php  echo form_error('title', '<span class="errorMessage">', '</span>');?>
+                    <input type='text' name='article_title' value="<?php echo $article[0]['article_title'];?>"/>
+                    <?php  echo form_error('article_title', '<span class="errorMessage">', '</span>');?>
                 </td>
             </tr>
             <tr>

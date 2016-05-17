@@ -22,8 +22,8 @@ class Article_model extends CI_Model{
         return $this->db->where(array('aid'=>$article_id))->get($this->table)->result_array();
     }
 
-    public function update_article($data){
-        return $this->db->update($this->table,$data);
+    public function update_article($data, $id){
+        return $this->db->update($this->table,$data, array('aid'=>$id));
     }
 
     public function article_del($article_id){

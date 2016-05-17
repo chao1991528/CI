@@ -24,15 +24,15 @@
             <tr>
                 <td>标题</td>
                 <td>
-                    <input type='text' name='title'  value="<?php echo set_value('title');?>"/>
-                    <?php  echo form_error('title', '<span class="errorMessage">', '</span>');?>
+                    <input type='text' name='article_title'  value="<?php echo set_value('article_title');?>"/>
+                    <?php  echo form_error('article_title', '<span class="errorMessage">', '</span>');?>
                 </td>
             </tr>
             <tr>
                 <td>类型</td>
                 <td>                 
-                    <input type='radio' value="1" name="type" <?php echo set_radio('type', '1', 'true');?>/>普通
-                    <input type='radio' value="2" name='type' <?php echo set_radio('type', '2');?>/>热门
+                    <input type='radio' value="1" name="atype" <?php echo set_radio('type', '1', 'true');?>/>普通
+                    <input type='radio' value="2" name='atype' <?php echo set_radio('type', '2');?>/>热门
                 </td>
             </tr>
             <tr>

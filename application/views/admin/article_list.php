@@ -22,7 +22,7 @@
         <tr>
             <td><?php echo $v['aid'];?></td>
             <td><?php echo $v['article_title'];?></td>
-            <td><?php echo $v['atype'];?></td>
+            <td><?php echo ($v['atype'] == '1')?'普通':'热门';?></td>
             <td><?php echo $v['category_name'];?></td>
              <td><?php echo $v['add_time'];?></td>
             <td>
