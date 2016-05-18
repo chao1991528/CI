@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<link rel="stylesheet" href="./css/login.css" />
-	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="./js/login.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url();?>/assets/admin/css/login.css" />
+	<script type="text/javascript" src="<?php echo base_url();?>/assets/admin/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/assets/admin/js/login.js"></script>
 	<title></title>
 </head>
 <body>
@@ -15,7 +15,10 @@
 			<input type="" value="" id="verify" name=""/>
 			<input type="submit" id="sub" value=""/>
 			<!-- 验证码 -->
-			<img src="" id="verify_img" />
+			<div class='captcha'>
+				<?php //echo $captcha['image'];?>
+			</div>
+			<img src="<?php echo site_url('admin/login/verify');?>" id="verify_img" />
 		</form>
 		<div class="four_bj">
 			
@@ -26,7 +29,7 @@
 		</div>
 	</div>
 <!--[if IE 6]>
-    <script type="text/javascript" src="./Js/iepng.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>/assets/admin/iepng.js"></script>
     <script type="text/javascript">
         DD_belatedPNG.fix('form','background');
     </script>

@@ -583,5 +583,17 @@ if (! function_exists('error'))
 		die();
 	}
 }
+if (! function_exists('echo_constant'))
+{
+	/**
+	 * [echo_constant description]
+	 * @return [type] [description]
+	 */
+	function echo_constant(){
+		echo '<pre>';
+		print_r(get_defined_constants(true));//true代表以数组格式展示，默认是false,框架定义的
+		echo '</pre>';
+	}
+}	
 /* End of file Common.php */
 /* Location: ./system/core/Common.php */
