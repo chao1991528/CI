@@ -10,10 +10,10 @@
 <body>
 	<div id="divBox">
 		<form action="" method="POST" id="login">
-			<input type="text" id="userName" name=""/>
-			<input type="password" id="psd" name=""/>
-			<input type="" value="" id="verify" name=""/>
-			<input type="submit" id="sub" value=""/>
+			<input type="text" id="userName" name="username"/>
+			<input type="password" id="psd" name="password"/>
+			<input type="" value="" id="verify" name="yzm"/>
+			<input type="submit" id="sub" value="login" name='send'/>
 			<!-- 验证码 -->
 			<div class='captcha'>
 				<?php //echo $captcha['image'];?>

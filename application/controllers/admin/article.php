@@ -2,7 +2,7 @@
 /*
 * 文章控制器
 */
-class Article extends CI_Controller {
+class Article extends MY_Controller {
 
     public function __construct(){
         parent::__construct();

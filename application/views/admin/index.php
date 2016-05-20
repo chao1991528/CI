@@ -28,7 +28,7 @@
 			</p>
 			<p class="out">
 				<span class="out_bg">&nbsp&nbsp&nbsp&nbsp</span>&nbsp
-				<a href="" target="_self">退出</a>
+				<a href="<?php echo site_url('admin/admin/logout');?>" target="_self">退出</a>
 			</p>
 		</div>
 	</div>

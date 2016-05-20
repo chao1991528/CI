@@ -2,7 +2,7 @@
 /*
 * 文章栏目控制器
 */
-class Category extends CI_Controller {
+class Category extends MY_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('category_model');

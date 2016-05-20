@@ -28,6 +28,23 @@
                      'label'   => '栏目名称', 
                      'rules'   => 'required|max_length[10]'
                   )
+               ),
+               'login' => array(
+                  array(
+                     'field'   => 'username', 
+                     'label'   => '用户名', 
+                     'rules'   => 'required'
+                  ),
+                  array(
+                     'field'   => 'password', 
+                     'label'   => '密码', 
+                     'rules'   => 'required'
+                  ),
+                  array(
+                     'field'   => 'yzm', 
+                     'label'   => '验证码', 
+                     'rules'   => 'required'
+                  )
                )                
             );
 ?>

@@ -4,20 +4,33 @@
 */
 class Login extends CI_Controller {
 
+    public function __construct(){
+        parent::__construct();
+        $this->load->model('user_model');
+    }
+
     public function index()
     {
-        // $this->load->helper('captcha');
-        // $vals = array(
-        //     'word' => 'Random word',
-        //     'img_path' => './captcha/',
-        //     'img_url' => base_url().'captcha/',
-        //     'img_width' => '80',
-        //     'img_height' => 25,
-        //     'expiration' => 10
-        // );
-
-        // $data['captcha'] = create_captcha($vals);
-        // $this->load->view('admin/login', $data);
+        $this->load->library('form_validation');
+        if($this->input->post('send') == 'login'){
+            if($this->form_validation->run('login')){
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+                $username = $this->input->post('username');
+                $password = $this->input->post('password');
+                $yzm = $this->input->post('yzm');
+                if(strtoupper($yzm) != $_SESSION['code']){
+                    error('验证码错误！');
+                }
+                if($this->user_model->login_check($username, $password)){
+                    success('admin/admin/index', '登录成功');
+                }else{
+                    error('用户名或密码错误');
+                }
+            }
+                
+        }
         $this->load->view('admin/login');
     }
 
@@ -33,6 +46,7 @@ class Login extends CI_Controller {
         $this->code->show();
     }
 }
+
 
 /* End of file Login.php */
 /* Location: ./application/controllers/Login.php */

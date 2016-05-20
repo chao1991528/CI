@@ -2,7 +2,7 @@
 /*
 * 前台默认控制器
 */
-class Admin extends CI_Controller {
+class Admin extends MY_Controller {
 
     public function index()
     {
@@ -12,6 +12,11 @@ class Admin extends CI_Controller {
 
     public function copy(){
         $this->load->view('admin/copy');
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        success('admin/login/index','清除成功');
     }
 }
 
