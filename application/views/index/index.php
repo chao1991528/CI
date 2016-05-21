@@ -8,22 +8,8 @@
 <script type="text/javascript" src="<?php echo base_url().'assets/index';?>/js/index.js"></script>
 </head>
 <body>
-	<div id="top">
-
-	</div>
-	<div id="header">
-		<div class='logo'>
-			
-		</div>
-		<div class='navigation'>
-			<a href="">首页</a>
-			<a href="<?php  echo site_url() . '/index/home/category';?>">青春</a>
-			<a href="<?php  echo site_url() . '/index/home/category';?>">首页</a>
-			<a href="<?php  echo site_url() . '/index/home/category';?>">首页</a>
-		</div>
-	</div>
-
- 
+	<div id="top"></div>
+	<?php $this->load->view('index/head');?>
 	<div id="main">
 		<div class='content'>
 			<div  class='list'>
@@ -31,39 +17,19 @@
 					<h2>最新文章..</h2>
 				</div>
 				<ul>
+					<?php foreach ($putong as $v): ?>
 					<li>
 						<div class='post-image'>
 							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
+								<img width="" src="<?php  echo base_url() . 'uploads/'.$v['thumb'];?>" />
 							</span>	
 						</div>	
 						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
+							<h3><?php echo $v['introduce'];?></h3>
+							<p><?php echo $v['content'];?></p>
 						</div>
 					</li>
-					<li>
-						<div class='post-image'>
-							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
-							</span>	
-						</div>	
-						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
-						</div>
-					</li>
-					<li>
-						<div class='post-image'>
-							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
-							</span>	
-						</div>	
-						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
-						</div>
-					</li>
+					<?php endforeach ?>
 				</ul>
 			</div>
 			<div  class='list'>
@@ -71,54 +37,23 @@
 					<h2>热门文章..</h2>
 				</div>
 				<ul>
+					<?php foreach ($hot as $v): ?>											
 					<li>
 						<div class='post-image'>
 							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
+								<img width="" src="<?php  echo base_url() . 'uploads/'.$v['thumb'];?>" />
 							</span>	
 						</div>	
 						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
+							<h3><?php echo $v['introduce'];?></h3>
+							<p><?php echo $v['content'];?></p>
 						</div>
 					</li>
-					<li>
-						<div class='post-image'>
-							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
-							</span>	
-						</div>	
-						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
-						</div>
-					</li>
-					<li>
-						<div class='post-image'>
-							<span>
-								<img width="" src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/10/22221.jpg&h=174&w=294&zc=1&q=100" />
-							</span>	
-						</div>	
-						<div class='post-content'>
-							<h3>从相见恨晚到不如不见</h3>
-							<p>花非花，雾非雾。夜半来，天明去。来如春梦不多时，去似朝云无觅处。浮华一生，淡忘一季。 空有回忆，打乱缠绵。 笑容不见，落寞万千。 弦，思华年。 那些年华，恍然如梦。 亦如，流水，一去不返。 不泣离别，不诉终殇。</p>
-						</div>
-					</li>
+					<?php endforeach ?>
 				</ul>
 			</div>
 		</div>
-		<div class='sidebar'>
-			<div class='item'>
-				<h2>最新文章</h2>
-				<ul class='flink'>
-					<li><a href="">打乱缠绵111111111111</a></li>
-					<li><a href="">笑容不见</a></li>
-					<li><a href="">恍然如梦</a></li>
-					<li><a href="">不泣离别</a></li>
-				</ul>
-			</div>
-			
-		</div>
+		<?php $this->load->view('index/right');?>
 	</div>
 
 	<div id="footer">

@@ -15,6 +15,12 @@ class Category_model extends CI_Model{
         return $this->db->get($this->table)->result_array();
     }
 
+    public function get_categorys_by_limit($limit){
+        $data = array();
+        $data = $this->db->limit($limit)->get($this->table)->result_array();
+        return $data;
+    }
+
     public function find_category($category_id){
         return $this->db->where(array('category_id'=>$category_id))->get($this->table)->result_array();
     }

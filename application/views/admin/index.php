@@ -19,7 +19,7 @@
 			<p class="adm">
 				<span>管理员：</span>
 				<span class="adm_pic">&nbsp&nbsp&nbsp&nbsp</span>
-				<span class="adm_people">[houdunwang]</span>
+				<span class="adm_people">[<?php echo $this->session->userdata('username');?>]</span>
 			</p>
 			<p class="now_time">
 				今天是：<?php echo date('Y-m-d', time());?> 
@@ -68,24 +68,19 @@
 			<div class="menu_box">
 				<h2>常用菜单</h2>
 				<div class="text">
-					<ul class="con">
+				     <ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">前台首页</a>				        	
-				        </li> 
-				    </ul>
-					<ul class="con">
-				        <li class="nav_u">
-				        	<a href="" class="pos">查看信息</a>				        	
+				        	<a href="<?php echo site_url('index/home/index');?>" target='_blank' class="pos">前台首页</a>				        	
 				        </li> 
 				    </ul>
 				    <ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">系统信息</a>				        	
+				        	<a href="<?php echo site_url('admin/admin/copy');?>" class="pos">系统信息</a>				        	
 				        </li> 
 				    </ul>
 				    <ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">密码修改</a>				        	
+				        	<a href="<?php echo site_url('admin/admin/change_pwd') ?>" class="pos">密码修改</a>				        	
 				        </li> 
 				    </ul>
 				</div>
