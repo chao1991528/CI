@@ -19,6 +19,8 @@ class Home extends CI_Controller {
 
         $rightTitle = $this->article_model->get_article_attr('aid, article_title', 10);
         $data['rightTitle'] = $rightTitle;
+
+        $this->output->cache(1/60);//页面缓存一分钟
         $this->load->view('index/index', $data);
     }
 
